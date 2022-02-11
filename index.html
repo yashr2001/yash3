@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+Login 
+</title>
+</head>
+<body>
+        <style>
+.button1{
+width:70px;
+height:45px;
+border:none;
+outline:none;
+box-shadow:0 3px 2px 0 #2c80a2;
+color:#FFFF00;
+font-size:14px;
+text-shadow:0 1px rgba(0,0,0,0.4);
+background-color:#FF0000;
+font-weight:700;
+background-image:url(../images/1.png);
+background-repeat:no-repeat;
+background-position:10px
+}
+        </style>
+          <script>
+              function chkData(nm,pw) 
+              {
+                if(nm=="" || pw=="")
+                {
+                  alert("Please fill all data");
+                }
+                  else if(nm.charAt(0)=='_' || nm.charAt(0)=='@' || (nm.charAt(0)>='0' && nm.charAt(0)<='9'))
+                      {
+                          alert("Please enter valid name");
+                      }
+                  else if(pw.length<6 || pw.length>12)
+                      {
+                          alert("Password length should be between 6 to 12 characters");
+                      }
+                  else 
+                      {
+                          alert("Data Submitted");
+                      }
+                
+              }
+          </script>
+        <form name="frm">
+            <font size="6">
+                Enter Name:- <input type="text" name="username"><br><br>
+                Enter Password:- <input type="password" name="pwd"><br><br>
+                <input class="button1" type="button" value="Submit" onclick="chkData(username.value,pwd.value);">
+            </font>
+            
+        </form>
+      
+  
+ 
+ </body>
+ </html>
